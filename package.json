@@ -1,0 +1,21 @@
+{
+  "name": "issue-85",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests",
+    "asbuild:untouched": "asc assembly/index.ts --target debug --transform as-bind --exportRuntime",
+    "asbuild:optimized": "asc assembly/index.ts --target release --transform as-bind --exportRuntime",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "assemblyscript": "^0.18.32"
+  },
+  "dependencies": {
+    "as-bind": "^0.7.1",
+    "@assemblyscript/loader": "^0.18.32"
+  }
+}
